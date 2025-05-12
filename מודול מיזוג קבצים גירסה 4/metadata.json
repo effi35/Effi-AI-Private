@@ -1,0 +1,62 @@
+{
+  "name": "smart_code_merger_pro",
+  "version": "2.0.0",
+  "description": "מודול חכם מורחב לאיחוד קבצי ZIP עם קוד ממקורות שונים, ניתוח מעמיק, ניהול גרסאות וסריקת אבטחה",
+  "author": "Claude AI",
+  "license": "MIT",
+  "main": "module.py",
+  "module_dependencies": [],
+  "dependencies": {
+    "python_packages": [
+      "python-dateutil>=2.8.2",
+      "chardet>=4.0.0",
+      "numpy>=1.22.0",
+      "nltk>=3.7",
+      "fuzzywuzzy>=0.18.0",
+      "flask>=2.1.1",
+      "flask-cors>=3.0.10",
+      "werkzeug>=2.1.1",
+      "scikit-learn>=1.0.2",
+      "tensorflow>=2.9.0",
+      "joblib>=1.1.0",
+      "pandas>=1.4.2",
+      "pillow>=9.1.0",
+      "pytesseract>=0.3.9",
+      "python-magic>=0.4.25",
+      "pytest>=7.1.2",
+      "gitpython>=3.1.27",
+      "bandit>=1.7.4",
+      "safety>=2.1.1",
+      "difflib-unified>=0.2.0"
+    ]
+  },
+  "ui_components": {
+    "settings_tab": true,
+    "main_tab": true,
+    "diff_viewer": true,
+    "version_manager": true,
+    "security_scanner": true
+  },
+  "hooks": [
+    "system_startup",
+    "system_shutdown",
+    "project_detection",
+    "file_merge",
+    "security_scan",
+    "version_change"
+  ],
+  "features": {
+    "project_detection": true,
+    "content_analysis": true,
+    "system_merge": true,
+    "document_analysis": true,
+    "version_management": true,
+    "security_scanning": true,
+    "code_completion": true,
+    "code_running": true,
+    "media_handling": true,
+    "remote_storage": true,
+    "export_import": true,
+    "ci_cd_integration": true
+  }
+}

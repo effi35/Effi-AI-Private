@@ -1,0 +1,122 @@
+{
+  "file_types": "*.py;*.js;*.html;*.css;*.java;*.xml;*.json;*.md;*.txt;*.c;*.cpp;*.cs;*.go;*.rb;*.php;*.scala;*.swift;*.ts;*.jsx;*.tsx;*.vue;*.rs;*.kt;*.dart;*.sql;*.sh;*.bat;*.yaml;*.yml;*.toml;*.ini;*.config;*.jpg;*.png;*.gif;*.svg;*.mp4;*.mp3;*.wav;*.pdf;*.doc;*.docx;*.xls;*.xlsx;*.ppt;*.pptx",
+  "project_detection": {
+    "min_files_for_project": 2,
+    "key_files": [
+      "package.json", ".gitignore", "README.md", "setup.py", "pom.xml", 
+      "build.gradle", "Makefile", "CMakeLists.txt", ".travis.yml", 
+      "Dockerfile", "docker-compose.yml", "requirements.txt", "Cargo.toml",
+      "pubspec.yaml", "tsconfig.json", "tslint.json", ".eslintrc"
+    ],
+    "min_relationship_score": 0.5,
+    "use_advanced_analysis": true,
+    "use_machine_learning": true,
+    "ml_model_path": "models/project_detector.pkl",
+    "crosscheck_percent": 100
+  },
+  "merger": {
+    "preserve_comments": true,
+    "date_based_priority": true,
+    "smart_structure_analysis": true,
+    "conflict_resolution": "smart",
+    "create_zip": true,
+    "max_sources": 10,
+    "backup_originals": true
+  },
+  "version_management": {
+    "enabled": true,
+    "max_versions": 10,
+    "compression": "gzip",
+    "storage_path": "versions",
+    "include_metadata": true,
+    "branch_tracking": true
+  },
+  "file_handling": {
+    "process_binary_files": true,
+    "process_documents": true,
+    "process_media": true,
+    "excluded_extensions": [".exe", ".dll", ".so", ".pyc", ".pyo", ".pyd", ".class", ".o", ".obj"],
+    "max_file_size_mb": 50,
+    "detect_encoding": true
+  },
+  "security_scanning": {
+    "enabled": true,
+    "scan_level": "medium",
+    "excluded_patterns": ["node_modules", "venv", "__pycache__", ".git"],
+    "vulnerability_db_update": true,
+    "report_path": "security_reports"
+  },
+  "code_completion": {
+    "enabled": true,
+    "suggestions_limit": 5,
+    "context_lines": 10,
+    "supported_languages": ["python", "javascript", "java", "c", "cpp"]
+  },
+  "code_running": {
+    "enabled": true,
+    "sandbox_enabled": true,
+    "timeout_seconds": 30,
+    "memory_limit_mb": 512,
+    "supported_languages": ["python", "javascript", "bash"]
+  },
+  "system_merge": {
+    "allow_cross_technology": true,
+    "detect_conflicts": true,
+    "rename_conflicts": true,
+    "create_zip": true,
+    "smart_integration": true
+  },
+  "remote_storage": {
+    "enabled": true,
+    "types": ["local", "ssh", "s3", "ftp", "webdav", "smb", "nfs"],
+    "timeout_seconds": 30,
+    "cache_enabled": true,
+    "cache_expiry_seconds": 3600
+  },
+  "logging": {
+    "level": "INFO",
+    "max_size_mb": 10,
+    "backup_count": 5,
+    "format": "%(asctime)s - %(name)s - %(levelname)s - %(message)s",
+    "log_requests": true,
+    "performance_metrics": true
+  },
+  "performance": {
+    "max_threads": 8,
+    "chunk_size": 1000000,
+    "cache_enabled": true,
+    "cache_size_mb": 100,
+    "batch_processing": true
+  },
+  "ui": {
+    "theme": "auto",
+    "animations": true,
+    "expanded_info": true,
+    "max_file_preview_kb": 500,
+    "syntax_highlighting": true,
+    "show_line_numbers": true,
+    "auto_refresh": true,
+    "multi_file_view": true
+  },
+  "api": {
+    "enabled": true,
+    "require_auth": true,
+    "rate_limit": 100,
+    "cors_enabled": true,
+    "versions": ["v1", "v2"],
+    "documentation": true,
+    "swagger_enabled": true
+  },
+  "export_import": {
+    "formats": ["json", "yaml", "xml", "csv"],
+    "include_settings": true,
+    "include_versions": true,
+    "import_validation": true
+  },
+  "ci_cd": {
+    "providers": ["jenkins", "github", "gitlab", "travis", "circle", "azure", "aws"],
+    "webhook_enabled": true,
+    "artifact_storage": true,
+    "report_generation": true
+  }
+}
